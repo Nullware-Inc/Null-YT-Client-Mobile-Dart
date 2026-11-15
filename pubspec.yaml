@@ -88,3 +88,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+# Linux: swap flutter_inappwebview's WPE WebKit backend for an empty stub
+# (Ubuntu doesn't ship WPE WebKit; Linux signs in via a browser session).
+dependency_overrides:
+  flutter_inappwebview_linux:
+    path: ../Null-YT-Core-Dart/third_party/flutter_inappwebview_linux_stub
