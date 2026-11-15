@@ -2,5 +2,13 @@ name: CI
 on:
   push: { branches: [main], tags: ["v*"] }
   pull_request:
+
+permissions:
+  contents: write
+
 jobs:
-  android: { uses: Nullware-Inc/.github/.github/workflows/flutter-app.yml@main, with: { platform: android } }
+  # Signed per-ABI APKs on GitHub Releases. Obtainium tracks these.
+  android:
+    uses: Nullware-Inc/.github/.github/workflows/flutter-app.yml@main
+    with: { platform: android }
+    secrets: inherit

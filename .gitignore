@@ -49,3 +49,8 @@ app.*.map.json
 
 # Gradle output
 /android/build/
+
+# Release signing (written by CI, never committed)
+/android/key.properties
+*.jks
+*.keystore
