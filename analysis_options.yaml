@@ -1,0 +1,12 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - build/**
+    - android/**
+    - ios/**
+  errors:
+    # Flutter 3.47 moved Material into package:material_ui. Plugins we depend
+    # on (media_kit, inappwebview) still use the classic library, so we stay
+    # on it until they migrate.
+    deprecated_member_use: ignore
